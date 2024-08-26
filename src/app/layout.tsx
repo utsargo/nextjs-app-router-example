@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.scss";
+import Header from "./header";
+import Footer from "./footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -15,8 +17,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={`${inter.variable}`}>{children}</body>
+        <html lang="en" className="scroll-smooth">
+            <body className={`${inter.variable} flex h-[100dvh] flex-col`}>
+                <Header />
+                <main className="pt-12">{children}</main>
+                <Footer />
+            </body>
         </html>
     );
 }

@@ -7,6 +7,10 @@ const config: Config = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
 
-    plugins: [],
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("@tailwindcss/aspect-ratio"),
+        require("@tailwindcss/forms"),
+    ],
 };
 export default config;

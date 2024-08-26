@@ -1,6 +1,13 @@
+import HomeAbout from "./home-about";
+import HomeContact from "./home-contact";
+import HomeHero from "./home-hero";
 const Home = () => {
     return (
-        <h1 className="p-2 px-2 text-4xl font-bold">Next App Router Exmple</h1>
+        <>
+            <HomeHero />
+            <HomeAbout />
+            <HomeContact />
+        </>
     );
 };
 
